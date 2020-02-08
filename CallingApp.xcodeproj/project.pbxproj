@@ -13,6 +13,12 @@
 		A609BDBF23EDC4630090B408 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A609BDBD23EDC4630090B408 /* Main.storyboard */; };
 		A609BDC123EDC4640090B408 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A609BDC023EDC4640090B408 /* Assets.xcassets */; };
 		A609BDC423EDC4640090B408 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A609BDC223EDC4640090B408 /* LaunchScreen.storyboard */; };
+		A609BDD423EDC88D0090B408 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDD323EDC88D0090B408 /* ParameterEncoder.swift */; };
+		A609BDD723EDC90E0090B408 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDD623EDC90E0090B408 /* EndPoint.swift */; };
+		A609BDD923EDC9320090B408 /* JSONParametersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDD823EDC9320090B408 /* JSONParametersEncoder.swift */; };
+		A609BDDB23EDC9A10090B408 /* URLParameteersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDDA23EDC9A10090B408 /* URLParameteersEncoder.swift */; };
+		A609BDDD23EDCB9A0090B408 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDDC23EDCB9A0090B408 /* NetworkRouter.swift */; };
+		A609BDDF23EDCC3C0090B408 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDDE23EDCC3C0090B408 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		A609BDC023EDC4640090B408 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A609BDC323EDC4640090B408 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A609BDC523EDC4640090B408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A609BDD323EDC88D0090B408 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		A609BDD623EDC90E0090B408 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		A609BDD823EDC9320090B408 /* JSONParametersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParametersEncoder.swift; sourceTree = "<group>"; };
+		A609BDDA23EDC9A10090B408 /* URLParameteersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameteersEncoder.swift; sourceTree = "<group>"; };
+		A609BDDC23EDCB9A0090B408 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		A609BDDE23EDCC3C0090B408 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 		A609BDB623EDC4630090B408 /* CallingApp */ = {
 			isa = PBXGroup;
 			children = (
+				A609BDD123EDC8720090B408 /* Networking */,
 				A609BDB723EDC4630090B408 /* AppDelegate.swift */,
 				A609BDB923EDC4630090B408 /* SceneDelegate.swift */,
 				A609BDBB23EDC4630090B408 /* ViewController.swift */,
@@ -65,6 +78,35 @@
 				A609BDC523EDC4640090B408 /* Info.plist */,
 			);
 			path = CallingApp;
+			sourceTree = "<group>";
+		};
+		A609BDD123EDC8720090B408 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A609BDD523EDC8EC0090B408 /* Router */,
+				A609BDD223EDC87E0090B408 /* Encoding */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A609BDD223EDC87E0090B408 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				A609BDD323EDC88D0090B408 /* ParameterEncoder.swift */,
+				A609BDD823EDC9320090B408 /* JSONParametersEncoder.swift */,
+				A609BDDA23EDC9A10090B408 /* URLParameteersEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		A609BDD523EDC8EC0090B408 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A609BDD623EDC90E0090B408 /* EndPoint.swift */,
+				A609BDDC23EDCB9A0090B408 /* NetworkRouter.swift */,
+				A609BDDE23EDCC3C0090B408 /* Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +180,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A609BDD923EDC9320090B408 /* JSONParametersEncoder.swift in Sources */,
+				A609BDDD23EDCB9A0090B408 /* NetworkRouter.swift in Sources */,
 				A609BDBC23EDC4630090B408 /* ViewController.swift in Sources */,
 				A609BDB823EDC4630090B408 /* AppDelegate.swift in Sources */,
+				A609BDDF23EDCC3C0090B408 /* Router.swift in Sources */,
+				A609BDD723EDC90E0090B408 /* EndPoint.swift in Sources */,
+				A609BDDB23EDC9A10090B408 /* URLParameteersEncoder.swift in Sources */,
+				A609BDD423EDC88D0090B408 /* ParameterEncoder.swift in Sources */,
 				A609BDBA23EDC4630090B408 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
