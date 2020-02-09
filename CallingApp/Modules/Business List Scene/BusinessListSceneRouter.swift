@@ -23,6 +23,8 @@ class BusinessListSceneRouter: BusinessListSceneRoutingLogic {
 extension BusinessListSceneRouter {
 
     func routeToBusinessInformation(business: Business) {
-
+        let viewController = BusinessInfoSceneConfigurator.configure()
+        viewController.dataStore.business = business
+        self.viewController?.present(viewController, animated: true, completion: nil)
     }
 }

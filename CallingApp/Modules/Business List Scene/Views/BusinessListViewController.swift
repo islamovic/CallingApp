@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol BusinessListDelegate: class {
+    func didSelect(business: Business)
+}
+
 class BusinessListViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
@@ -17,6 +21,8 @@ class BusinessListViewController: UIViewController {
     var interactor: BusinessListSceneBusinessLogic!
     var dataStore: BusinessListSceneDataStore!
     var router:  BusinessListSceneRouter!
+
+    weak var delegate: BusinessListDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +83,15 @@ extension BusinessListViewController: UITableViewDataSource {
     }
 }
 
+extension BusinessListViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        router.routeToBusinessInformation(business: dataStore.businesses[indexPath.row])
+    }
+}
+
 private extension BusinessListViewController {
 
     func setup() {
@@ -95,7 +110,7 @@ private extension BusinessListViewController {
         tableView.register(nib, forCellReuseIdentifier: identifier)
 
         tableView.dataSource = self
-//        tableView.delegate = self
+        tableView.delegate = self
 
         tableView.tableFooterView = UIView(frame: .zero)
     }

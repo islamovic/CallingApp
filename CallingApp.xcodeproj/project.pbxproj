@@ -32,6 +32,15 @@
 		A609BDFC23EF96070090B408 /* BusinessListSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDFB23EF96070090B408 /* BusinessListSceneRouter.swift */; };
 		A609BE0023F024400090B408 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDFE23F024400090B408 /* BusinessCell.swift */; };
 		A609BE0123F024400090B408 /* BusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A609BDFF23F024400090B408 /* BusinessCell.xib */; };
+		A609BE0523F075420090B408 /* BusinessInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE0323F075420090B408 /* BusinessInfoViewController.swift */; };
+		A609BE0623F075420090B408 /* BusinessInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A609BE0423F075420090B408 /* BusinessInfoViewController.xib */; };
+		A609BE0923F0755F0090B408 /* BusinessInfoSceneProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE0823F0755F0090B408 /* BusinessInfoSceneProtocols.swift */; };
+		A609BE0B23F0756A0090B408 /* BusinessInfoScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE0A23F0756A0090B408 /* BusinessInfoScenePresenter.swift */; };
+		A609BE0D23F075730090B408 /* BusinessInfoSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE0C23F075730090B408 /* BusinessInfoSceneInteractor.swift */; };
+		A609BE0F23F075810090B408 /* BusinessInfoSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE0E23F075810090B408 /* BusinessInfoSceneConfigurator.swift */; };
+		A609BE1123F0758C0090B408 /* BusinessInfoSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE1023F0758C0090B408 /* BusinessInfoSceneWorker.swift */; };
+		A609BE1323F0786D0090B408 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE1223F0786D0090B408 /* Geometry.swift */; };
+		A609BE1523F0787B0090B408 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE1423F0787B0090B408 /* Address.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +71,15 @@
 		A609BDFB23EF96070090B408 /* BusinessListSceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListSceneRouter.swift; sourceTree = "<group>"; };
 		A609BDFE23F024400090B408 /* BusinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		A609BDFF23F024400090B408 /* BusinessCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
+		A609BE0323F075420090B408 /* BusinessInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInfoViewController.swift; sourceTree = "<group>"; };
+		A609BE0423F075420090B408 /* BusinessInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessInfoViewController.xib; sourceTree = "<group>"; };
+		A609BE0823F0755F0090B408 /* BusinessInfoSceneProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInfoSceneProtocols.swift; sourceTree = "<group>"; };
+		A609BE0A23F0756A0090B408 /* BusinessInfoScenePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInfoScenePresenter.swift; sourceTree = "<group>"; };
+		A609BE0C23F075730090B408 /* BusinessInfoSceneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInfoSceneInteractor.swift; sourceTree = "<group>"; };
+		A609BE0E23F075810090B408 /* BusinessInfoSceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInfoSceneConfigurator.swift; sourceTree = "<group>"; };
+		A609BE1023F0758C0090B408 /* BusinessInfoSceneWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInfoSceneWorker.swift; sourceTree = "<group>"; };
+		A609BE1223F0786D0090B408 /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		A609BE1423F0787B0090B408 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +181,12 @@
 		A609BDE223EF80B50090B408 /* Business Info Scene */ = {
 			isa = PBXGroup;
 			children = (
+				A609BE0223F075300090B408 /* Views */,
+				A609BE0823F0755F0090B408 /* BusinessInfoSceneProtocols.swift */,
+				A609BE0A23F0756A0090B408 /* BusinessInfoScenePresenter.swift */,
+				A609BE0C23F075730090B408 /* BusinessInfoSceneInteractor.swift */,
+				A609BE0E23F075810090B408 /* BusinessInfoSceneConfigurator.swift */,
+				A609BE1023F0758C0090B408 /* BusinessInfoSceneWorker.swift */,
 			);
 			path = "Business Info Scene";
 			sourceTree = "<group>";
@@ -180,6 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				A609BDE723EF82E40090B408 /* Business.swift */,
+				A609BE1223F0786D0090B408 /* Geometry.swift */,
+				A609BE1423F0787B0090B408 /* Address.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -210,6 +236,23 @@
 				A609BDFF23F024400090B408 /* BusinessCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		A609BE0223F075300090B408 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A609BE0723F075470090B408 /* Cells */,
+				A609BE0323F075420090B408 /* BusinessInfoViewController.swift */,
+				A609BE0423F075420090B408 /* BusinessInfoViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A609BE0723F075470090B408 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +315,7 @@
 			files = (
 				A609BE0123F024400090B408 /* BusinessCell.xib in Resources */,
 				A609BDC423EDC4640090B408 /* LaunchScreen.storyboard in Resources */,
+				A609BE0623F075420090B408 /* BusinessInfoViewController.xib in Resources */,
 				A609BDC123EDC4640090B408 /* Assets.xcassets in Resources */,
 				A609BDFA23EF95B40090B408 /* BusinessListViewController.xib in Resources */,
 				A609BDBF23EDC4630090B408 /* Main.storyboard in Resources */,
@@ -286,23 +330,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				A609BDF923EF95B40090B408 /* BusinessListViewController.swift in Sources */,
+				A609BE0F23F075810090B408 /* BusinessInfoSceneConfigurator.swift in Sources */,
 				A609BDD923EDC9320090B408 /* JSONParametersEncoder.swift in Sources */,
 				A609BDFC23EF96070090B408 /* BusinessListSceneRouter.swift in Sources */,
 				A609BDF123EF8CDB0090B408 /* BusinessListSceneInteractor.swift in Sources */,
 				A609BDDD23EDCB9A0090B408 /* NetworkRouter.swift in Sources */,
+				A609BE1523F0787B0090B408 /* Address.swift in Sources */,
 				A609BE0023F024400090B408 /* BusinessCell.swift in Sources */,
+				A609BE1323F0786D0090B408 /* Geometry.swift in Sources */,
 				A609BDED23EF883B0090B408 /* CustomError.swift in Sources */,
 				A609BDBC23EDC4630090B408 /* ViewController.swift in Sources */,
 				A609BDB823EDC4630090B408 /* AppDelegate.swift in Sources */,
+				A609BE1123F0758C0090B408 /* BusinessInfoSceneWorker.swift in Sources */,
 				A609BDDF23EDCC3C0090B408 /* Router.swift in Sources */,
 				A609BDE423EF813C0090B408 /* BusinessListProtocols.swift in Sources */,
 				A609BDF323EF8E370090B408 /* BusinessListSceneWorker.swift in Sources */,
 				A609BDEB23EF87EE0090B408 /* Result.swift in Sources */,
 				A609BDD723EDC90E0090B408 /* EndPoint.swift in Sources */,
+				A609BE0923F0755F0090B408 /* BusinessInfoSceneProtocols.swift in Sources */,
+				A609BE0D23F075730090B408 /* BusinessInfoSceneInteractor.swift in Sources */,
 				A609BDF523EF95890090B408 /* BusinessListSceneConfigurator.swift in Sources */,
 				A609BDDB23EDC9A10090B408 /* URLParameteersEncoder.swift in Sources */,
+				A609BE0523F075420090B408 /* BusinessInfoViewController.swift in Sources */,
 				A609BDE823EF82E40090B408 /* Business.swift in Sources */,
 				A609BDD423EDC88D0090B408 /* ParameterEncoder.swift in Sources */,
+				A609BE0B23F0756A0090B408 /* BusinessInfoScenePresenter.swift in Sources */,
 				A609BDEF23EF8A460090B408 /* BusinessListScenePresenter.swift in Sources */,
 				A609BDBA23EDC4630090B408 /* SceneDelegate.swift in Sources */,
 			);
