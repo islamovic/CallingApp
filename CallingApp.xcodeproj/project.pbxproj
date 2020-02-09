@@ -19,6 +19,17 @@
 		A609BDDB23EDC9A10090B408 /* URLParameteersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDDA23EDC9A10090B408 /* URLParameteersEncoder.swift */; };
 		A609BDDD23EDCB9A0090B408 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDDC23EDCB9A0090B408 /* NetworkRouter.swift */; };
 		A609BDDF23EDCC3C0090B408 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDDE23EDCC3C0090B408 /* Router.swift */; };
+		A609BDE423EF813C0090B408 /* BusinessListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDE323EF813C0090B408 /* BusinessListProtocols.swift */; };
+		A609BDE823EF82E40090B408 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDE723EF82E40090B408 /* Business.swift */; };
+		A609BDEB23EF87EE0090B408 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDEA23EF87EE0090B408 /* Result.swift */; };
+		A609BDED23EF883B0090B408 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDEC23EF883B0090B408 /* CustomError.swift */; };
+		A609BDEF23EF8A460090B408 /* BusinessListScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDEE23EF8A460090B408 /* BusinessListScenePresenter.swift */; };
+		A609BDF123EF8CDB0090B408 /* BusinessListSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDF023EF8CDB0090B408 /* BusinessListSceneInteractor.swift */; };
+		A609BDF323EF8E370090B408 /* BusinessListSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDF223EF8E370090B408 /* BusinessListSceneWorker.swift */; };
+		A609BDF523EF95890090B408 /* BusinessListSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDF423EF95890090B408 /* BusinessListSceneConfigurator.swift */; };
+		A609BDF923EF95B40090B408 /* BusinessListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDF723EF95B40090B408 /* BusinessListViewController.swift */; };
+		A609BDFA23EF95B40090B408 /* BusinessListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A609BDF823EF95B40090B408 /* BusinessListViewController.xib */; };
+		A609BDFC23EF96070090B408 /* BusinessListSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDFB23EF96070090B408 /* BusinessListSceneRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +47,17 @@
 		A609BDDA23EDC9A10090B408 /* URLParameteersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameteersEncoder.swift; sourceTree = "<group>"; };
 		A609BDDC23EDCB9A0090B408 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		A609BDDE23EDCC3C0090B408 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A609BDE323EF813C0090B408 /* BusinessListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListProtocols.swift; sourceTree = "<group>"; };
+		A609BDE723EF82E40090B408 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		A609BDEA23EF87EE0090B408 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		A609BDEC23EF883B0090B408 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		A609BDEE23EF8A460090B408 /* BusinessListScenePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListScenePresenter.swift; sourceTree = "<group>"; };
+		A609BDF023EF8CDB0090B408 /* BusinessListSceneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListSceneInteractor.swift; sourceTree = "<group>"; };
+		A609BDF223EF8E370090B408 /* BusinessListSceneWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListSceneWorker.swift; sourceTree = "<group>"; };
+		A609BDF423EF95890090B408 /* BusinessListSceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListSceneConfigurator.swift; sourceTree = "<group>"; };
+		A609BDF723EF95B40090B408 /* BusinessListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListViewController.swift; sourceTree = "<group>"; };
+		A609BDF823EF95B40090B408 /* BusinessListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessListViewController.xib; sourceTree = "<group>"; };
+		A609BDFB23EF96070090B408 /* BusinessListSceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListSceneRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +90,8 @@
 		A609BDB623EDC4630090B408 /* CallingApp */ = {
 			isa = PBXGroup;
 			children = (
+				A609BDE523EF82750090B408 /* Domain */,
+				A609BDE023EF7FB20090B408 /* Modules */,
 				A609BDD123EDC8720090B408 /* Networking */,
 				A609BDB723EDC4630090B408 /* AppDelegate.swift */,
 				A609BDB923EDC4630090B408 /* SceneDelegate.swift */,
@@ -107,6 +131,71 @@
 				A609BDDE23EDCC3C0090B408 /* Router.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		A609BDE023EF7FB20090B408 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A609BDE223EF80B50090B408 /* Business Info Scene */,
+				A609BDE123EF7FC30090B408 /* Business List Scene */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A609BDE123EF7FC30090B408 /* Business List Scene */ = {
+			isa = PBXGroup;
+			children = (
+				A609BDF623EF95A10090B408 /* Views */,
+				A609BDE323EF813C0090B408 /* BusinessListProtocols.swift */,
+				A609BDEE23EF8A460090B408 /* BusinessListScenePresenter.swift */,
+				A609BDF023EF8CDB0090B408 /* BusinessListSceneInteractor.swift */,
+				A609BDF223EF8E370090B408 /* BusinessListSceneWorker.swift */,
+				A609BDF423EF95890090B408 /* BusinessListSceneConfigurator.swift */,
+				A609BDFB23EF96070090B408 /* BusinessListSceneRouter.swift */,
+			);
+			path = "Business List Scene";
+			sourceTree = "<group>";
+		};
+		A609BDE223EF80B50090B408 /* Business Info Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Business Info Scene";
+			sourceTree = "<group>";
+		};
+		A609BDE523EF82750090B408 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A609BDE923EF87E20090B408 /* Utils */,
+				A609BDE623EF827F0090B408 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A609BDE623EF827F0090B408 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A609BDE723EF82E40090B408 /* Business.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		A609BDE923EF87E20090B408 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A609BDEA23EF87EE0090B408 /* Result.swift */,
+				A609BDEC23EF883B0090B408 /* CustomError.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A609BDF623EF95A10090B408 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A609BDF723EF95B40090B408 /* BusinessListViewController.swift */,
+				A609BDF823EF95B40090B408 /* BusinessListViewController.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +258,7 @@
 			files = (
 				A609BDC423EDC4640090B408 /* LaunchScreen.storyboard in Resources */,
 				A609BDC123EDC4640090B408 /* Assets.xcassets in Resources */,
+				A609BDFA23EF95B40090B408 /* BusinessListViewController.xib in Resources */,
 				A609BDBF23EDC4630090B408 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,14 +270,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A609BDF923EF95B40090B408 /* BusinessListViewController.swift in Sources */,
 				A609BDD923EDC9320090B408 /* JSONParametersEncoder.swift in Sources */,
+				A609BDFC23EF96070090B408 /* BusinessListSceneRouter.swift in Sources */,
+				A609BDF123EF8CDB0090B408 /* BusinessListSceneInteractor.swift in Sources */,
 				A609BDDD23EDCB9A0090B408 /* NetworkRouter.swift in Sources */,
+				A609BDED23EF883B0090B408 /* CustomError.swift in Sources */,
 				A609BDBC23EDC4630090B408 /* ViewController.swift in Sources */,
 				A609BDB823EDC4630090B408 /* AppDelegate.swift in Sources */,
 				A609BDDF23EDCC3C0090B408 /* Router.swift in Sources */,
+				A609BDE423EF813C0090B408 /* BusinessListProtocols.swift in Sources */,
+				A609BDF323EF8E370090B408 /* BusinessListSceneWorker.swift in Sources */,
+				A609BDEB23EF87EE0090B408 /* Result.swift in Sources */,
 				A609BDD723EDC90E0090B408 /* EndPoint.swift in Sources */,
+				A609BDF523EF95890090B408 /* BusinessListSceneConfigurator.swift in Sources */,
 				A609BDDB23EDC9A10090B408 /* URLParameteersEncoder.swift in Sources */,
+				A609BDE823EF82E40090B408 /* Business.swift in Sources */,
 				A609BDD423EDC88D0090B408 /* ParameterEncoder.swift in Sources */,
+				A609BDEF23EF8A460090B408 /* BusinessListScenePresenter.swift in Sources */,
 				A609BDBA23EDC4630090B408 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,7 +27,7 @@ public class Router: NetworkRouter {
     }
 
     public static let shared = Router()
-    
+
     func request(_ router: EndPoint, success: @escaping NetworkRouterSuccessCompletion,
                  failure: @escaping NetworkRouterFailedCompletion) {
 
