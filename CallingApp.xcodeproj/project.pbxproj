@@ -30,6 +30,8 @@
 		A609BDF923EF95B40090B408 /* BusinessListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDF723EF95B40090B408 /* BusinessListViewController.swift */; };
 		A609BDFA23EF95B40090B408 /* BusinessListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A609BDF823EF95B40090B408 /* BusinessListViewController.xib */; };
 		A609BDFC23EF96070090B408 /* BusinessListSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDFB23EF96070090B408 /* BusinessListSceneRouter.swift */; };
+		A609BE0023F024400090B408 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BDFE23F024400090B408 /* BusinessCell.swift */; };
+		A609BE0123F024400090B408 /* BusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A609BDFF23F024400090B408 /* BusinessCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		A609BDF723EF95B40090B408 /* BusinessListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListViewController.swift; sourceTree = "<group>"; };
 		A609BDF823EF95B40090B408 /* BusinessListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessListViewController.xib; sourceTree = "<group>"; };
 		A609BDFB23EF96070090B408 /* BusinessListSceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListSceneRouter.swift; sourceTree = "<group>"; };
+		A609BDFE23F024400090B408 /* BusinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
+		A609BDFF23F024400090B408 /* BusinessCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,10 +196,20 @@
 		A609BDF623EF95A10090B408 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A609BDFD23F024210090B408 /* Cell */,
 				A609BDF723EF95B40090B408 /* BusinessListViewController.swift */,
 				A609BDF823EF95B40090B408 /* BusinessListViewController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A609BDFD23F024210090B408 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A609BDFE23F024400090B408 /* BusinessCell.swift */,
+				A609BDFF23F024400090B408 /* BusinessCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A609BE0123F024400090B408 /* BusinessCell.xib in Resources */,
 				A609BDC423EDC4640090B408 /* LaunchScreen.storyboard in Resources */,
 				A609BDC123EDC4640090B408 /* Assets.xcassets in Resources */,
 				A609BDFA23EF95B40090B408 /* BusinessListViewController.xib in Resources */,
@@ -275,6 +290,7 @@
 				A609BDFC23EF96070090B408 /* BusinessListSceneRouter.swift in Sources */,
 				A609BDF123EF8CDB0090B408 /* BusinessListSceneInteractor.swift in Sources */,
 				A609BDDD23EDCB9A0090B408 /* NetworkRouter.swift in Sources */,
+				A609BE0023F024400090B408 /* BusinessCell.swift in Sources */,
 				A609BDED23EF883B0090B408 /* CustomError.swift in Sources */,
 				A609BDBC23EDC4630090B408 /* ViewController.swift in Sources */,
 				A609BDB823EDC4630090B408 /* AppDelegate.swift in Sources */,

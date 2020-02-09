@@ -27,11 +27,11 @@ class BusinessListSceneInteractor: BusinessListSceneBusinessLogic, BusinessListS
 extension BusinessListSceneInteractor {
     func fetchBusinessList(input: String) {
 
-        if !businesses.isEmpty {
-            let response = BusinessListScene.Fetch.Response.success(businesses)
-            self.presenter.presentFetchedBusiness(response)
-            return
-        }
+//        if !businesses.isEmpty {
+//            let response = BusinessListScene.Fetch.Response.success(businesses)
+//            self.presenter.presentFetchedBusiness(response)
+//            return
+//        }
 
         worker.fetchBusiness(input: input) { [weak self] (businesses, error) in
 

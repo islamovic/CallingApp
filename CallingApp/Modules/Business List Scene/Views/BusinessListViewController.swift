@@ -10,6 +10,10 @@ import UIKit
 
 class BusinessListViewController: UIViewController {
 
+    @IBOutlet var tableView: UITableView!
+
+    let searchController = UISearchController(searchResultsController: nil)
+    
     var interactor: BusinessListSceneBusinessLogic!
     var dataStore: BusinessListSceneDataStore!
     var router:  BusinessListSceneRouter!
@@ -17,17 +21,96 @@ class BusinessListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        interactor.fetchBusinessList(input: "ezzat")
+        setup()
     }
 }
 
 extension BusinessListViewController: BusinessListSceneDisplayView {
 
     func display(viewModel: BusinessListScene.ViewModel) {
-        print(viewModel.business)
+
+        dataStore.businesses = viewModel.business
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
 
     func display(error: CustomError) {
         print(error.localizedDescription)
+    }
+}
+
+extension BusinessListViewController: UISearchBarDelegate {
+
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        if let keyword = searchBar.text, !keyword.isEmpty {
+            interactor.fetchBusinessList(input: keyword)
+        }
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        interactor.fetchBusinessList(input: searchText)
+    }
+
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        interactor.fetchBusinessList(input: searchBar.text ?? "")
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        dataStore.businesses = []
+        tableView.reloadData()
+    }
+}
+
+extension BusinessListViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataStore.businesses.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let identifier = String(describing: BusinessCell.self)
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! BusinessCell
+        cell.configure(business: dataStore.businesses[indexPath.row])
+        return cell
+    }
+}
+
+private extension BusinessListViewController {
+
+    func setup() {
+        setupTableView()
+        setupSearchController()
+        self.title = "Business"
+    }
+
+    func setupTableView() {
+
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 44
+
+        let identifier = String(describing: BusinessCell.self)
+        let nib = UINib(nibName: identifier, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: identifier)
+
+        tableView.dataSource = self
+//        tableView.delegate = self
+
+        tableView.tableFooterView = UIView(frame: .zero)
+    }
+
+    func setupSearchController() {
+        searchController.searchBar.placeholder = "Search for a business name"
+        if #available(iOS 11.0, *) {
+            navigationItem.searchController = searchController
+            navigationItem.hidesSearchBarWhenScrolling = false
+        } else {
+            tableView.tableHeaderView = searchController.searchBar
+        }
+
+        searchController.searchBar.delegate = self
+        definesPresentationContext = true
+        searchController.obscuresBackgroundDuringPresentation = false
     }
 }

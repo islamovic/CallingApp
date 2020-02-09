@@ -18,7 +18,7 @@ struct BusineessList: Decodable {
 
 struct Address: Decodable {
     let title: String
-    let secondary: String
+    let secondary: String?
 
     enum CodingKeys: String, CodingKey {
         case title = "main_text"
