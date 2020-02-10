@@ -25,11 +25,12 @@ struct BusinessResult: Decodable {
 }
 
 struct Business: Decodable {
-    let description: String
+    let description: String?
     let distanceMeters: Double?
-    let id: String
-    let placeId: String
-    let address: Address
+    let formattedAddress: String?
+    let id: String?
+    let placeId: String?
+    let address: Address?
     let geometry: Geometry?
     let icon: String?
     let name: String?
@@ -39,9 +40,27 @@ struct Business: Decodable {
     let types: [String]
     let phoneNumber: String?
 
+    init() {
+        description = ""
+        distanceMeters = 0.0
+        formattedAddress = ""
+        id = ""
+        placeId = ""
+        address = nil
+        geometry = nil
+        icon = ""
+        name = ""
+        rating = 0.0
+        url = URL(string: "")
+        totalRating = 0
+        types = []
+        phoneNumber = ""
+    }
+
     enum CodingKeys: String, CodingKey {
 
         case placeId = "place_id"
+        case formattedAddress = "formatted_address"
         case address = "structured_formatting"
         case distanceMeters = "distance_meters"
         case totalRating = "user_ratings_total"

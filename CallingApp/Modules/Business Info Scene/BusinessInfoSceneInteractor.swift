@@ -15,11 +15,12 @@ class BusinessInfoSceneInteractor: BusinessInfoSceneBusinessLogic, BusinessInfoS
     var worker = BusinessInfoSceneWorker()
 
     // MARK: Data Store
-    var business: Business?
+    var business: Business
 
     // MARK: Initializers
     required init(presenter: BusinessInfoScenePresentingLogic) {
         self.presenter = presenter
+        business = Business()
     }
 }
 

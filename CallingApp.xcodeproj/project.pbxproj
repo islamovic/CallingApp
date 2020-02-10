@@ -41,6 +41,10 @@
 		A609BE1123F0758C0090B408 /* BusinessInfoSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE1023F0758C0090B408 /* BusinessInfoSceneWorker.swift */; };
 		A609BE1323F0786D0090B408 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE1223F0786D0090B408 /* Geometry.swift */; };
 		A609BE1523F0787B0090B408 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE1423F0787B0090B408 /* Address.swift */; };
+		A609BE1823F096AD0090B408 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE1623F096AD0090B408 /* LocationCell.swift */; };
+		A609BE1923F096AD0090B408 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A609BE1723F096AD0090B408 /* LocationCell.xib */; };
+		A609BE1E23F0D2FF0090B408 /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE1C23F0D2FF0090B408 /* DetailsCell.swift */; };
+		A609BE1F23F0D2FF0090B408 /* DetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A609BE1D23F0D2FF0090B408 /* DetailsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +84,10 @@
 		A609BE1023F0758C0090B408 /* BusinessInfoSceneWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInfoSceneWorker.swift; sourceTree = "<group>"; };
 		A609BE1223F0786D0090B408 /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		A609BE1423F0787B0090B408 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		A609BE1623F096AD0090B408 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		A609BE1723F096AD0090B408 /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
+		A609BE1C23F0D2FF0090B408 /* DetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
+		A609BE1D23F0D2FF0090B408 /* DetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +259,10 @@
 		A609BE0723F075470090B408 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A609BE1623F096AD0090B408 /* LocationCell.swift */,
+				A609BE1723F096AD0090B408 /* LocationCell.xib */,
+				A609BE1C23F0D2FF0090B408 /* DetailsCell.swift */,
+				A609BE1D23F0D2FF0090B408 /* DetailsCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -314,10 +326,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A609BE0123F024400090B408 /* BusinessCell.xib in Resources */,
+				A609BE1923F096AD0090B408 /* LocationCell.xib in Resources */,
 				A609BDC423EDC4640090B408 /* LaunchScreen.storyboard in Resources */,
 				A609BE0623F075420090B408 /* BusinessInfoViewController.xib in Resources */,
 				A609BDC123EDC4640090B408 /* Assets.xcassets in Resources */,
 				A609BDFA23EF95B40090B408 /* BusinessListViewController.xib in Resources */,
+				A609BE1F23F0D2FF0090B408 /* DetailsCell.xib in Resources */,
 				A609BDBF23EDC4630090B408 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +355,7 @@
 				A609BDED23EF883B0090B408 /* CustomError.swift in Sources */,
 				A609BDBC23EDC4630090B408 /* ViewController.swift in Sources */,
 				A609BDB823EDC4630090B408 /* AppDelegate.swift in Sources */,
+				A609BE1E23F0D2FF0090B408 /* DetailsCell.swift in Sources */,
 				A609BE1123F0758C0090B408 /* BusinessInfoSceneWorker.swift in Sources */,
 				A609BDDF23EDCC3C0090B408 /* Router.swift in Sources */,
 				A609BDE423EF813C0090B408 /* BusinessListProtocols.swift in Sources */,
@@ -350,6 +365,7 @@
 				A609BE0923F0755F0090B408 /* BusinessInfoSceneProtocols.swift in Sources */,
 				A609BE0D23F075730090B408 /* BusinessInfoSceneInteractor.swift in Sources */,
 				A609BDF523EF95890090B408 /* BusinessListSceneConfigurator.swift in Sources */,
+				A609BE1823F096AD0090B408 /* LocationCell.swift in Sources */,
 				A609BDDB23EDC9A10090B408 /* URLParameteersEncoder.swift in Sources */,
 				A609BE0523F075420090B408 /* BusinessInfoViewController.swift in Sources */,
 				A609BDE823EF82E40090B408 /* Business.swift in Sources */,

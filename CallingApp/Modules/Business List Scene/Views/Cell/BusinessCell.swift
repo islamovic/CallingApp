@@ -25,12 +25,15 @@ class BusinessCell: UITableViewCell {
     }
 
     func configure(business: Business) {
-        self.addressLabel.text = business.address.title
-        if let secondray = business.address.secondary {
-            secondaryLabel.isHidden = false
-            self.secondaryLabel.text = secondray
-        } else {
-            secondaryLabel.isHidden = true
+
+        if let address = business.address {
+            self.addressLabel.text = address.title
+            if let secondray = address.secondary {
+                secondaryLabel.isHidden = false
+                self.secondaryLabel.text = secondray
+            } else {
+                secondaryLabel.isHidden = true
+            }
         }
     }
     

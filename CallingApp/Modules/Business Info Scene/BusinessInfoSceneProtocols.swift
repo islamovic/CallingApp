@@ -25,7 +25,7 @@ protocol BusinessInfoScenePresentingLogic: class {
 }
 
 protocol BusinessInfoSceneDataStore: class {
-    var business: Business? { get set }
+    var business: Business { get set }
 }
 
 // MARK: - Functionalities
