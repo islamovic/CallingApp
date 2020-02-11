@@ -50,7 +50,18 @@
 		A609BE2923F31C0F0090B408 /* BusinessDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE2823F31C0F0090B408 /* BusinessDetails.swift */; };
 		A609BE2B23F31C9F0090B408 /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE2A23F31C9F0090B408 /* UITableView+Utils.swift */; };
 		A609BE2D23F31F230090B408 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE2C23F31F230090B408 /* UIViewController+Alert.swift */; };
+		A609BE3923F323190090B408 /* CallingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE3823F323190090B408 /* CallingAppTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A609BE3B23F323190090B408 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A609BDAC23EDC4630090B408 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A609BDB323EDC4630090B408;
+			remoteInfo = CallingApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A609BDB423EDC4630090B408 /* CallingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,10 +109,20 @@
 		A609BE2823F31C0F0090B408 /* BusinessDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetails.swift; sourceTree = "<group>"; };
 		A609BE2A23F31C9F0090B408 /* UITableView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
 		A609BE2C23F31F230090B408 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		A609BE3623F323190090B408 /* CallingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A609BE3823F323190090B408 /* CallingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallingAppTests.swift; sourceTree = "<group>"; };
+		A609BE3A23F323190090B408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A609BDB123EDC4630090B408 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A609BE3323F323190090B408 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				A609BDB623EDC4630090B408 /* CallingApp */,
+				A609BE3723F323190090B408 /* CallingAppTests */,
 				A609BDB523EDC4630090B408 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				A609BDB423EDC4630090B408 /* CallingApp.app */,
+				A609BE3623F323190090B408 /* CallingAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -306,6 +329,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		A609BE3723F323190090B408 /* CallingAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				A609BE3823F323190090B408 /* CallingAppTests.swift */,
+				A609BE3A23F323190090B408 /* Info.plist */,
+			);
+			path = CallingAppTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -326,6 +358,24 @@
 			productReference = A609BDB423EDC4630090B408 /* CallingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A609BE3523F323190090B408 /* CallingAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A609BE3D23F323190090B408 /* Build configuration list for PBXNativeTarget "CallingAppTests" */;
+			buildPhases = (
+				A609BE3223F323190090B408 /* Sources */,
+				A609BE3323F323190090B408 /* Frameworks */,
+				A609BE3423F323190090B408 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A609BE3C23F323190090B408 /* PBXTargetDependency */,
+			);
+			name = CallingAppTests;
+			productName = CallingAppTests;
+			productReference = A609BE3623F323190090B408 /* CallingAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -338,6 +388,10 @@
 				TargetAttributes = {
 					A609BDB323EDC4630090B408 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					A609BE3523F323190090B408 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = A609BDB323EDC4630090B408;
 					};
 				};
 			};
@@ -355,6 +409,7 @@
 			projectRoot = "";
 			targets = (
 				A609BDB323EDC4630090B408 /* CallingApp */,
+				A609BE3523F323190090B408 /* CallingAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -372,6 +427,13 @@
 				A609BDFA23EF95B40090B408 /* BusinessListViewController.xib in Resources */,
 				A609BE1F23F0D2FF0090B408 /* DetailsCell.xib in Resources */,
 				A609BDBF23EDC4630090B408 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A609BE3423F323190090B408 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +482,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A609BE3223F323190090B408 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A609BE3923F323190090B408 /* CallingAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A609BE3C23F323190090B408 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A609BDB323EDC4630090B408 /* CallingApp */;
+			targetProxy = A609BE3B23F323190090B408 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A609BDBD23EDC4630090B408 /* Main.storyboard */ = {
@@ -596,6 +674,46 @@
 			};
 			name = Release;
 		};
+		A609BE3E23F323190090B408 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VW46WHVYZR;
+				INFOPLIST_FILE = CallingAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppLineup.CallingAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallingApp.app/CallingApp";
+			};
+			name = Debug;
+		};
+		A609BE3F23F323190090B408 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VW46WHVYZR;
+				INFOPLIST_FILE = CallingAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppLineup.CallingAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallingApp.app/CallingApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -613,6 +731,15 @@
 			buildConfigurations = (
 				A609BDC923EDC4640090B408 /* Debug */,
 				A609BDCA23EDC4640090B408 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A609BE3D23F323190090B408 /* Build configuration list for PBXNativeTarget "CallingAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A609BE3E23F323190090B408 /* Debug */,
+				A609BE3F23F323190090B408 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

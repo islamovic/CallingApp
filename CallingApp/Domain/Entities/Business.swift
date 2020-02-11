@@ -40,6 +40,24 @@ struct Business: Decodable {
     let types: [String]
     let phoneNumber: String?
 
+    init(name: String, type: [String], placeId: String) {
+        self.name        = name
+        self.placeId     = placeId
+        self.types       = type
+        id               = ""
+        icon             = ""
+        phoneNumber      = ""
+        description      = ""
+        url              = URL(string: "")
+        formattedAddress = ""
+        rating           = 0.0
+        totalRating      = 0
+        distanceMeters   = 0.0
+        address          = nil
+        geometry         = nil
+
+    }
+
     init() {
         description = ""
         distanceMeters = 0.0

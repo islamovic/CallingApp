@@ -25,14 +25,8 @@ class BusinessListSceneInteractor: BusinessListSceneBusinessLogic, BusinessListS
 }
 
 extension BusinessListSceneInteractor {
+
     func fetchBusinessList(input: String) {
-
-//        if !businesses.isEmpty {
-//            let response = BusinessListScene.Fetch.Response.success(businesses)
-//            self.presenter.presentFetchedBusiness(response)
-//            return
-//        }
-
         worker.fetchBusiness(input: input) { [weak self] (businesses, error) in
 
             guard let `self` = self else { return }
@@ -41,9 +35,22 @@ extension BusinessListSceneInteractor {
                 let response = BusinessListScene.Fetch.Response.error(error)
                 self.presenter.presentFetchedBusiness(response)
             } else {
+                self.businesses = businesses
                 let response = BusinessListScene.Fetch.Response.success(businesses)
                 self.presenter.presentFetchedBusiness(response)
             }
         }
     }
+
+    // MARK: - For Testing
+    func fetchBusinesses(input: String) {
+
+        if !businesses.isEmpty {
+            let results = businesses.filter { $0.name!.contains(input) }
+            let response = BusinessListScene.Fetch.Response.success(results)
+            self.presenter.presentFetchedBusiness(response)
+            return
+        }
+    }
+
 }
