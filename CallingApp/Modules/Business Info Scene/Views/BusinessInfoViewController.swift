@@ -11,7 +11,7 @@ import UIKit
 protocol BusinessInfoDataSource {
     func numberOfRows() -> Int
     func cellForRow(at indexPath: IndexPath, tableView: UITableView, business: Business) -> UITableViewCell
-    func heightForInfo(for tableview: UITableView) -> CGFloat
+    func heightForInfo() -> CGFloat
 }
 
 class BusinessInfoMap: BusinessInfoDataSource {
@@ -27,7 +27,7 @@ class BusinessInfoMap: BusinessInfoDataSource {
         return cell
     }
 
-    func heightForInfo(for tableview: UITableView) -> CGFloat {
+    func heightForInfo() -> CGFloat {
         return 300.0
     }
 }
@@ -46,10 +46,6 @@ class BusinessDetails: BusinessInfoDataSource {
     }
 
     func heightForInfo() -> CGFloat {
-        return 145.0
-    }
-
-    func heightForInfo(for tableview: UITableView) -> CGFloat {
         return UITableView.automaticDimension
     }
 }
@@ -105,7 +101,7 @@ extension BusinessInfoViewController: UITableViewDataSource {
 
 extension BusinessInfoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return dataSource[indexPath.section].heightForInfo(for: tableView)
+        return dataSource[indexPath.section].heightForInfo()
     }
 }
 
@@ -124,7 +120,7 @@ private extension BusinessInfoViewController {
     func setupTableView() {
 
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 600
+        tableView.estimatedRowHeight = 44
 
         let identifier = String(describing: LocationCell.self)
         let nib = UINib(nibName: identifier, bundle: nil)

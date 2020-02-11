@@ -14,8 +14,9 @@ class DetailsCell: UITableViewCell {
     @IBOutlet var ratingLabel: UILabel!
     @IBOutlet var userTotalRatingLabel: UILabel!
     @IBOutlet var typeLabel: UILabel!
-    @IBOutlet var callStackView: UIStackView!
     @IBOutlet var callButton: UIButton!
+
+    var object: Business?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,18 +29,24 @@ class DetailsCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func callButtonTapped(_ sender: UIButton) {
+        object!.phoneNumber!.makeACall()
+    }
+    
     func configureCell(business: Business) {
+
+        self.object = business
 
         let type = business.types.filter { $0 == "car_rental" || $0 == "lodging" }.first
         self.typeLabel.text = type ?? "Other"
 
-        guard let _ = business.phoneNumber else {
+        if let _ = business.phoneNumber {
+            callButton.isHidden = false
+        } else {
             callButton.isHidden = true
-            callStackView.isHidden = true
-            return
         }
 
-        self.addressLabel.text = business.formattedAddress ?? business.name
+        self.addressLabel.text = business.formattedAddress ?? business.description
         if let rating = business.rating {
             self.ratingLabel.isHidden = false
             self.ratingLabel.text = "\(rating)"

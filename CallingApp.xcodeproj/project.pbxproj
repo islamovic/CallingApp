@@ -45,6 +45,7 @@
 		A609BE1923F096AD0090B408 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A609BE1723F096AD0090B408 /* LocationCell.xib */; };
 		A609BE1E23F0D2FF0090B408 /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE1C23F0D2FF0090B408 /* DetailsCell.swift */; };
 		A609BE1F23F0D2FF0090B408 /* DetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A609BE1D23F0D2FF0090B408 /* DetailsCell.xib */; };
+		A609BE2223F317340090B408 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE2123F317340090B408 /* String+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		A609BE1723F096AD0090B408 /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		A609BE1C23F0D2FF0090B408 /* DetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
 		A609BE1D23F0D2FF0090B408 /* DetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsCell.xib; sourceTree = "<group>"; };
+		A609BE2123F317340090B408 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		A609BDB623EDC4630090B408 /* CallingApp */ = {
 			isa = PBXGroup;
 			children = (
+				A609BE2023F3171D0090B408 /* Extension */,
 				A609BDE523EF82750090B408 /* Domain */,
 				A609BDE023EF7FB20090B408 /* Modules */,
 				A609BDD123EDC8720090B408 /* Networking */,
@@ -267,6 +270,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		A609BE2023F3171D0090B408 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A609BE2123F317340090B408 /* String+Utils.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,6 +378,7 @@
 				A609BDF523EF95890090B408 /* BusinessListSceneConfigurator.swift in Sources */,
 				A609BE1823F096AD0090B408 /* LocationCell.swift in Sources */,
 				A609BDDB23EDC9A10090B408 /* URLParameteersEncoder.swift in Sources */,
+				A609BE2223F317340090B408 /* String+Utils.swift in Sources */,
 				A609BE0523F075420090B408 /* BusinessInfoViewController.swift in Sources */,
 				A609BDE823EF82E40090B408 /* Business.swift in Sources */,
 				A609BDD423EDC88D0090B408 /* ParameterEncoder.swift in Sources */,
