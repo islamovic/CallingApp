@@ -76,8 +76,7 @@ extension BusinessListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let identifier = String(describing: BusinessCell.self)
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! BusinessCell
+        let cell: BusinessCell = tableView.dequeueReusableCell(indexPath: indexPath)
         cell.configure(business: dataStore.businesses[indexPath.row])
         return cell
     }
@@ -105,9 +104,7 @@ private extension BusinessListViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
 
-        let identifier = String(describing: BusinessCell.self)
-        let nib = UINib(nibName: identifier, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: identifier)
+        tableView.register(BusinessCell.self)
 
         tableView.dataSource = self
         tableView.delegate = self

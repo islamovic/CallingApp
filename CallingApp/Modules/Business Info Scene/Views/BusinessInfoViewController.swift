@@ -8,48 +8,6 @@
 
 import UIKit
 
-protocol BusinessInfoDataSource {
-    func numberOfRows() -> Int
-    func cellForRow(at indexPath: IndexPath, tableView: UITableView, business: Business) -> UITableViewCell
-    func heightForInfo() -> CGFloat
-}
-
-class BusinessInfoMap: BusinessInfoDataSource {
-
-    func numberOfRows() -> Int {
-        return 1
-    }
-
-    func cellForRow(at indexPath: IndexPath, tableView: UITableView, business: Business) -> UITableViewCell {
-        let identifier = String(describing: LocationCell.self)
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! LocationCell
-        cell.configure(business: business)
-        return cell
-    }
-
-    func heightForInfo() -> CGFloat {
-        return 300.0
-    }
-}
-
-class BusinessDetails: BusinessInfoDataSource {
-
-    func numberOfRows() -> Int {
-        return 1
-    }
-
-    func cellForRow(at indexPath: IndexPath, tableView: UITableView, business: Business) -> UITableViewCell {
-        let identifier = String(describing: DetailsCell.self)
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! DetailsCell
-        cell.configureCell(business: business)
-        return cell
-    }
-
-    func heightForInfo() -> CGFloat {
-        return UITableView.automaticDimension
-    }
-}
-
 class BusinessInfoViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
@@ -122,13 +80,8 @@ private extension BusinessInfoViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
 
-        let identifier = String(describing: LocationCell.self)
-        let nib = UINib(nibName: identifier, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: identifier)
-
-        let identifier2 = String(describing: DetailsCell.self)
-        let nib2 = UINib(nibName: identifier2, bundle: nil)
-        tableView.register(nib2, forCellReuseIdentifier: identifier2)
+        tableView.register(LocationCell.self)
+        tableView.register(DetailsCell.self)
 
         tableView.dataSource = self
         tableView.delegate = self

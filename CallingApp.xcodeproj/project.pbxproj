@@ -46,6 +46,10 @@
 		A609BE1E23F0D2FF0090B408 /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE1C23F0D2FF0090B408 /* DetailsCell.swift */; };
 		A609BE1F23F0D2FF0090B408 /* DetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A609BE1D23F0D2FF0090B408 /* DetailsCell.xib */; };
 		A609BE2223F317340090B408 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE2123F317340090B408 /* String+Utils.swift */; };
+		A609BE2523F31BEE0090B408 /* BusinessInfoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE2423F31BEE0090B408 /* BusinessInfoDataSource.swift */; };
+		A609BE2723F31BFC0090B408 /* BusinessInfoMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE2623F31BFC0090B408 /* BusinessInfoMap.swift */; };
+		A609BE2923F31C0F0090B408 /* BusinessDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE2823F31C0F0090B408 /* BusinessDetails.swift */; };
+		A609BE2B23F31C9F0090B408 /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609BE2A23F31C9F0090B408 /* UITableView+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +94,10 @@
 		A609BE1C23F0D2FF0090B408 /* DetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
 		A609BE1D23F0D2FF0090B408 /* DetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsCell.xib; sourceTree = "<group>"; };
 		A609BE2123F317340090B408 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		A609BE2423F31BEE0090B408 /* BusinessInfoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInfoDataSource.swift; sourceTree = "<group>"; };
+		A609BE2623F31BFC0090B408 /* BusinessInfoMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInfoMap.swift; sourceTree = "<group>"; };
+		A609BE2823F31C0F0090B408 /* BusinessDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetails.swift; sourceTree = "<group>"; };
+		A609BE2A23F31C9F0090B408 /* UITableView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +200,7 @@
 		A609BDE223EF80B50090B408 /* Business Info Scene */ = {
 			isa = PBXGroup;
 			children = (
+				A609BE2323F31BCF0090B408 /* Business Info DataSource */,
 				A609BE0223F075300090B408 /* Views */,
 				A609BE0823F0755F0090B408 /* BusinessInfoSceneProtocols.swift */,
 				A609BE0A23F0756A0090B408 /* BusinessInfoScenePresenter.swift */,
@@ -274,8 +283,19 @@
 			isa = PBXGroup;
 			children = (
 				A609BE2123F317340090B408 /* String+Utils.swift */,
+				A609BE2A23F31C9F0090B408 /* UITableView+Utils.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		A609BE2323F31BCF0090B408 /* Business Info DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				A609BE2423F31BEE0090B408 /* BusinessInfoDataSource.swift */,
+				A609BE2623F31BFC0090B408 /* BusinessInfoMap.swift */,
+				A609BE2823F31C0F0090B408 /* BusinessDetails.swift */,
+			);
+			path = "Business Info DataSource";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,6 +378,8 @@
 				A609BE0F23F075810090B408 /* BusinessInfoSceneConfigurator.swift in Sources */,
 				A609BDD923EDC9320090B408 /* JSONParametersEncoder.swift in Sources */,
 				A609BDFC23EF96070090B408 /* BusinessListSceneRouter.swift in Sources */,
+				A609BE2B23F31C9F0090B408 /* UITableView+Utils.swift in Sources */,
+				A609BE2723F31BFC0090B408 /* BusinessInfoMap.swift in Sources */,
 				A609BDF123EF8CDB0090B408 /* BusinessListSceneInteractor.swift in Sources */,
 				A609BDDD23EDCB9A0090B408 /* NetworkRouter.swift in Sources */,
 				A609BE1523F0787B0090B408 /* Address.swift in Sources */,
@@ -371,6 +393,7 @@
 				A609BDDF23EDCC3C0090B408 /* Router.swift in Sources */,
 				A609BDE423EF813C0090B408 /* BusinessListProtocols.swift in Sources */,
 				A609BDF323EF8E370090B408 /* BusinessListSceneWorker.swift in Sources */,
+				A609BE2923F31C0F0090B408 /* BusinessDetails.swift in Sources */,
 				A609BDEB23EF87EE0090B408 /* Result.swift in Sources */,
 				A609BDD723EDC90E0090B408 /* EndPoint.swift in Sources */,
 				A609BE0923F0755F0090B408 /* BusinessInfoSceneProtocols.swift in Sources */,
@@ -380,6 +403,7 @@
 				A609BDDB23EDC9A10090B408 /* URLParameteersEncoder.swift in Sources */,
 				A609BE2223F317340090B408 /* String+Utils.swift in Sources */,
 				A609BE0523F075420090B408 /* BusinessInfoViewController.swift in Sources */,
+				A609BE2523F31BEE0090B408 /* BusinessInfoDataSource.swift in Sources */,
 				A609BDE823EF82E40090B408 /* Business.swift in Sources */,
 				A609BDD423EDC88D0090B408 /* ParameterEncoder.swift in Sources */,
 				A609BE0B23F0756A0090B408 /* BusinessInfoScenePresenter.swift in Sources */,
