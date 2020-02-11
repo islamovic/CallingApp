@@ -42,7 +42,7 @@ extension BusinessListViewController: BusinessListSceneDisplayView {
     }
 
     func display(error: CustomError) {
-        print(error.localizedDescription)
+        showAlert(title: nil, message: error.localizedDescription)
     }
 }
 
@@ -85,8 +85,8 @@ extension BusinessListViewController: UITableViewDataSource {
 extension BusinessListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         tableView.deselectRow(at: indexPath, animated: true)
-
         router.routeToBusinessInformation(business: dataStore.businesses[indexPath.row])
     }
 }

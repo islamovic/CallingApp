@@ -37,7 +37,7 @@ extension BusinessInfoViewController: BusinessInfoSceneDisplayView {
     }
 
     func display(error: CustomError) {
-        print(error.localizedDescription)
+        showAlert(title: nil, message: error.localizedDescription)
     }
 }
 
